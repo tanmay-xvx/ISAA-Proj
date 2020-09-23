@@ -1,82 +1,47 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Data Leakage Detection</title>
-	<meta charset="utf-8" />
+  <head>
+	  <title>Data Leakage Detection</title>
+	  <meta charset="utf-8" />
 	
-	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-<script type="text/javascript">
+	  <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <script type="text/javascript">
+      
+      function valid() {
+        var aa=document.s.uname.value;
+        if(aa=="")  {
+          alert("Enter Name");
+          document.s.uname.focus();
+          return false;
+        }
 
-function valid()
-{
-var aa=document.s.un.value;
-if(aa=="")
-{
-alert("Enter Name");
-document.s.un.focus();
-return false;
-}
+        var a=document.s.uid.value;
+        if(a=="") {
+          alert("Enter User ID");
+          document.s.uid.focus();
+          return false;
+        }
+      
+        var b=document.s.pass.value;
+        if(b=="") {
+          alert("Enter Password");
+          document.s.pass.focus();
+          return false;
+        }
 
-var a=document.s.uid.value;
-if(a=="")
-{
-alert("Enter User ID");
-document.s.uid.focus();
-return false;
-}
-var b=document.s.pass.value;
-if(b=="")
-{
-alert("Enter Password");
-document.s.pass.focus();
-return false;
-}
+        var emailfilter=/^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i;
+        var m=emailfilter.test(document.s.email.value);
+        if(m==false) {
+          alert("Please enter a valid Email Id");
+          document.s.email.focus();
+          return false;
+        }
 
-
-var k = document.s.mob.value;
-if(k=="")
-{
-alert("Enter mobile number");
-document.s.mob.focus();
-return false;
-}
-if(isNaN(k))
-{
-alert("Enter mobile number in numbers");
-document.s.mob.focus();
-return false;
-}
-if(k.charAt(0)!=9)
-{
-alert("Enter the correct mobile no");
-document.s.mob.focus();
-return false;
-}
-if(k.length!=10)
-{
-alert("Enter 10 digits");
-document.s.mob.focus();
-return false;
-}
-
-var emailfilter=/^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i;
-var m=emailfilter.test(document.s.eid.value);
-if(m==false)
-{
-alert("Please enter a valid Email Id");
-document.s.eid.focus();
-return false;
-}
-
-}
-
-</script>
-
-
-</head>
+      }
+    </script>
+  </head>
 
 <body class="body">
 	
@@ -85,9 +50,7 @@ return false;
 			<li ><a href="index.php">Home</a></li>
 			<li class="active"><a href="register.html">Registration</a></li>
 			<li ><a href="userlogin.php">UserLogin</a></li>
-			<li><a href="adminlogin.php">AdminLogin</a></li>
-			<li><a href="article.php">Articles</a></li>
-			
+			<li><a href="adminlogin.php">AdminLogin</a></li>			
 	</ul></nav>
 	</header>
 		
@@ -97,31 +60,29 @@ return false;
 					<header>
 						<h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE">Registration</a></h2>
 					</header>
-								
-					
-          <div class="box">
-<p>		  
+                
+      <div class="box">
+        <p>		  
           <form name="s" action="register.php" method="POST" onsubmit="return valid()">
             <table align="center" cellpadding="" cellspacing="" width="">
               <tr> 
-                <td colspan="2" align="center"><font size="2"><b>
-                  </b></font></td>
+                <td colspan="2" align="center"><font size="2"><b></b></font></td>
               </tr>
               <tr> 
                 <td><font face="Courier New" size="+1"><strong>Name</strong></font></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="a1" id="a1" class="b"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="uname" id="uname" class="b"></td>
               </tr>
               <tr> 
                 <td><font face="Courier New" size="+1"><strong>User ID</strong></font></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="a2" id="a2"class="b"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="uid" id="uid"class="b"></td>
               </tr>
               <tr> 
                 <td><font face="Courier New" size="+1"><strong>Password</strong></font></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="a3" id="a3"class="b"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="pass" id="pass"class="b"></td>
               </tr>
                 <tr> 
                 <td><font face="Courier New" size="+1"><strong>Email ID</strong></font></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="a5" id="a1=5"class="b"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="email" id="email"class="b"></td>
               </tr>
                 <td></td>
                 <td><input type="submit" name="s" value="submit" class="b1" > 
@@ -131,21 +92,12 @@ return false;
             </table>
           </form>
         </div>
-   
-
-
-
-
-						</p>
-							</content>
-					
-				</article>
-
-				
-		</div>
+      </p>
+		</content>
+	</article>
+  </div>
 			
-				
-	</div>
+</div>
 	
 	<footer class="mainFooter">
 		<p>CSE3501 Project </p>

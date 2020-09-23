@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,6 @@
 	
 	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
 <body class="body">
@@ -18,9 +16,7 @@
 			<li><a href="register.html">Registration</a></li>
 			<li><a href="userlogin.php">UserLogin</a></li>
 			<li><a href="adminlogin.php">AdminLogin</a></li>
-			<li><a href="article.php">Articles</a></li>
-			
-	</ul></nav>
+		</ul></nav>
 	</header>
 		
 	<div class="mainContent1">

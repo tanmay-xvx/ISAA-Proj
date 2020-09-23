@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +16,7 @@
 			<li ><a href="index.php">Home</a></li>
 			<li><a href="register.html">Registration</a></li>
 			<li ><a href="userlogin.php">UserLogin</a></li>
-			<li class="active"><a href="adminlogin.php">AdminLogin</a></li>
-			<li><a href="article.php">Articles</a></li>
-			
+			<li class="active"><a href="adminlogin.php">AdminLogin</a></li>			
 	</ul></nav>
 	</header>
 		
@@ -48,7 +45,7 @@
                 <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="password" id="username" class="b"></td>
               </tr>
                <tr> 
-                <td><td><input type="submit" name="s" value="submit" class="b1" > 
+                <td><input type="submit" name="s" value="submit" class="b1" > 
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                   <input type="reset" name="r" value="clear" class="b1"></td>
                     </tr>
@@ -56,20 +53,10 @@
             </table>
           </form>
         </div>
-   
-
-
-
-
-						</p>
+		</p>
 	</content>
-					
-				</article>
-
-				
-		</div>
-			
-				
+	</article>
+	</div>
 	</div>
 	
 	<footer class="mainFooter">

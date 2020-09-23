@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Data Leakage DetEction</title>
+	<title>Data Leakage Detection</title>
 	<meta charset="utf-8" />
 	
 	<link rel="stylesheet" href="stylesheet.css" type="text/css" />
@@ -17,9 +16,7 @@
 			<li ><a href="index.php">Home</a></li>
 			<li><a href="register.html">Registration</a></li>
 			<li class="active"><a href="userlogin.php">UserLogin</a></li>
-			<li ><a href="adminlogin.php">AdminLogin</a></li>
-			<li><a href="article.php">Articles</a></li>
-			
+			<li ><a href="adminlogin.php">AdminLogin</a></li>			
 	</ul></nav>
 	</header>
 		
@@ -29,7 +26,6 @@
 					<header>
 						<h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE"> User Login</a></h2>
 					</header>
-					
 					
 					<content>
 						<p>		  
@@ -51,25 +47,14 @@
                 <td><td><input type="submit" name="s" value="submit" class="b1" > 
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                   <input type="reset" name="r" value="clear" class="b1"></td>
-                    </tr>
-             
+                    </tr>  
             </table>
           </form>
         </div>
-   
-
-
-
-
-						</p>
-	</content>
-					
-				</article>
-
-				
+   		</p>
+		</content>			
+		</article>
 		</div>
-			
-				
 	</div>
 	
 	<footer class="mainFooter">

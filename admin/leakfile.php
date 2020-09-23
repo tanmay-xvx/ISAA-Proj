@@ -58,69 +58,53 @@ header( 'Content-Type: text/html; charset=utf-8' );
 					
 					<content>
 						<p>
-							
-<table align="center" cellpadding="9" cellspacing="2" width="10">
-							<tr bgcolor="green"><td >id</td><td>Unuthorised User</td><td>Date</td><td>Send msg</td></tr>
-		
-					<?PHP
-				
-				$con = mysqli_connect("localhost","root","");
-                                if (!$con)
-                                    echo('Could not connect: ' . mysqli_error());
-                                else
-                                {
-                                    mysqli_select_db($con, "dataleakage");
-									
+							<form action="resetprobability.php">
+    							<input type="submit" value="Reset Probability"/>
+							</form>
 
-
-$qry="Select * FROM leaker";
-	$result=mysqli_query($con, $qry);
-while($w1=mysqli_fetch_array($result))
-{
-	echo'			<tr bgcolor="white">
-	
-	<td>'.$w1["id"].'    </td><td>     '.$w1["name"].'	
-					</td><td>'.$w1["time"].'
-
-	</td><td> 
-<a href="sendmsg.php?'.$w1["name"].'">Click</a>
-
-					</td>
-</tr>
-
-	
-	
-	';
-		
-}
-								}
-
-?>
-					
-					
-					
-
-					
-						</p>
+							<form name="leaker" align="center" action="probability.php" method="POST">
+							<table align="center" cellpadding="9" cellspacing="2" width="10">
+								<tr bgcolor="green">
+									<td >id</td>
+									<td>User</td>
+									<td>Probability</td>
+									<td>Send msg</td></tr>
+								
+								<?PHP
+									$con = mysqli_connect("localhost","root","");
+                                	if (!$con)
+                                    	echo('Could not connect: ' . mysqli_error());
+                                	else {
+                                    	mysqli_select_db($con, "dataleakage");
+										$qry="Select * FROM leaker";
+										$result=mysqli_query($con, $qry);
+										while($w1=mysqli_fetch_array($result)) {
+										echo'			<tr bgcolor="white">
+										<td>'.$w1["id"].'    </td>
+										<td>     '.$w1["name"].'	
+										</td><td>'.$w1["probability"].'
+										</td><td> 
+										<a href="sendmsg.php?'.$w1["name"].'">Click</a>
+										</td>
+										</tr>';
+										}
+									}
+								?>
+								
+							</p>
 						</content>
-
-</table>					
+					</table>
+					<input type="submit" value="Find Probability" />
+					</form>					
 				</article>
-
-
-
 			</div>
 <aside class="top-sidebar">
 					<article>
 					<h2>Welcome: <?php echo $_SESSION['name']/*Echo the username */ ?></h2>
 <li><a href="logout.php">Logout</a></li>
-					
-					<p></p>
 				    </article>
 				</aside>	
 		</div>
-			
-				
 	</div>
 	
 	<footer class="mainFooter">

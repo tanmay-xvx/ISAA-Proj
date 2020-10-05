@@ -12,7 +12,7 @@ else {
     $result1=mysqli_query($con, $qry1);
      
     //leaked data set S
-    $Set=["t1","t2","t3"];
+    $Set=["t1","t10","t6","t9"];
     //$S="t1";
     $p=0.2; // most probable value of p
 

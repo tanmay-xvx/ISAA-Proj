@@ -74,6 +74,7 @@ header( 'Content-Type: text/html; charset=utf-8' );
 $id=$_GET['id'];
 $qry="Select * FROM presentation WHERE subject = '$id'";
 	$result=mysqli_query($con,$qry);
+$res=mysqli_fetch_array(mysqli_query($con,"Select k from askkey where filename = '$id';"));
 while($w1=mysqli_fetch_array($result))
 {
 
@@ -94,7 +95,7 @@ echo '
 </tr>
 <tr>
       <td></td>
-      <td><input type="hidden" name="s2" id="s2" value='.$w1["Topic"].'></td>
+      <td><input type="hidden" name="s2" id="s2" value='.$res["k"].'></td>
     </tr>
     
     

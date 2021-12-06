@@ -172,11 +172,7 @@ while($w1=mysqli_fetch_array($result))
 				FileName:</strong></td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="a3" id="a3" class="b"></td>
               </tr>
-              <tr> 
-                <td><strong>Key:</strong></td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="a2" id="a2" class="b">
-</td>
-              </tr>
+
                 <td></td>
                 <td><input type="submit" name="s" value="Send" class="b1" > 
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 

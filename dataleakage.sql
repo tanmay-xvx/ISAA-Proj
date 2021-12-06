@@ -74,7 +74,7 @@ INSERT INTO `askkey` (`id`, `user`, `filename`, `status`, `reciver`, `k`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `leaker` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id` varchar(50) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `time` date NOT NULL,
   PRIMARY KEY (`id`)
@@ -85,12 +85,12 @@ CREATE TABLE IF NOT EXISTS `leaker` (
 --
 
 INSERT INTO `leaker` (`id`, `name`, `time`) VALUES
-(12, 'dj', '0000-00-00'),
-(13, 'sam', '0000-00-00'),
-(14, 'sam', '0000-00-00'),
-(15, 'ka', '0000-00-00'),
-(16, 'vi', '0000-00-00'),
-(17, 'sam', '0000-00-00');
+(1, 'agent1', '0000-00-00'),
+(2, 'agent2', '0000-00-00'),
+(3, 'agent3', '0000-00-00'),
+(4, 'agent4', '0000-00-00'),
+(5, 'agent5', '0000-00-00'),
+(6, 'agent6', '0000-00-00');
 
 -- --------------------------------------------------------
 

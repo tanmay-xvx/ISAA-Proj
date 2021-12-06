@@ -12,7 +12,7 @@ else {
     $result1=mysqli_query($con, $qry1);
      
     //leaked data set S
-    $Set=["t1","t10","t6","t9"];
+    $Set=["t2","t3","t0","t1","t4"];
     //$S="t1";
     $p=0.2; // most probable value of p
 
@@ -36,6 +36,7 @@ else {
         while($w1=mysqli_fetch_array($result) ){
             $currentAgent=$w1["sendto"];
             if(!in_array($currentAgent,$agents)) {
+                // echo $currentAgent."djiweufjwef<br>";
                 array_push($agents, $currentAgent);
                 $sub=$w1["subject"];
                 $sql=mysqli_query($con,"SELECT * from presentation WHERE subject = '$sub'");
@@ -44,10 +45,12 @@ else {
                 array_push($data, $key);
             }
         }
+        print_r($agents);echo"ehwiu<br>";
         $num=count($agents);
         //set data as null if obj not present
         for($i =0;$i<count($agents);$i++){
             $myArray = explode(',', $data[$i]);
+            print_r($myArray);
             if(!in_array($S,$myArray)){
               $data[$i]="";
               $num--; 
@@ -59,15 +62,18 @@ else {
                 $product[$i]*=1-(1-$p)/$num;
             }
         }
-        print_r($product);
-        echo "<br/>";
-
+        // print_r($product);
+        // print_r($finalAgents);
+        // echo "<br/>";
+        $finalAgents=$agents;
     }
 
     for($i =0;$i<count($finalAgents);$i++){
+        // echo $product[$i].$finalAgents[$i]."<br>";
         $prob=1-$product[$i];
         $sql6 = "UPDATE leaker SET probability='$prob' WHERE name='$finalAgents[$i]' ";
-        $result6 = mysqli_query($con,$sql6) or die ("Could not send data into DB: " . mysqli_error($con));
+        $result6 = mysqli_query($con,$sql6);
+        // echo "done ".$finalAgents[$i];
     }
   
     header("Location: leakfile.php");
